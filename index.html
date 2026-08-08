@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Birthday Surprise ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Pacifico&family=Dancing+Script:wght@400;700&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ================= LOADING ================= -->
+
+<section id="loading-screen">
+
+    <div class="loader-heart">❤️</div>
+
+    <h2>Loading your surprise...</h2>
+
+</section>
+
+<!-- ================= PASSWORD ================= -->
+
+<section id="password-page">
+
+    <h1>Enter Password</h1>
+
+    <input id="password" type="password" readonly>
+
+    <div class="keypad">
+
+        <button onclick="addNumber('1')">1</button>
+        <button onclick="addNumber('2')">2</button>
+        <button onclick="addNumber('3')">3</button>
+
+        <button onclick="addNumber('4')">4</button>
+        <button onclick="addNumber('5')">5</button>
+        <button onclick="addNumber('6')">6</button>
+
+        <button onclick="addNumber('7')">7</button>
+        <button onclick="addNumber('8')">8</button>
+        <button onclick="addNumber('9')">9</button>
+
+        <div></div>
+
+        <button onclick="addNumber('0')">0</button>
+
+        <div></div>
+
+    </div>
+
+    <button id="unlock-btn" onclick="checkPassword()">
+        Unlock ❤️
+    </button>
+
+</section>
+
+<!-- ================= QUESTION ================= -->
+
+<section id="question-page" class="hidden">
+
+    <h1 class="question-title">
+        Do you wanna see what I made for you?
+    </h1>
+
+    <img src="images/cat.png"
+         id="cat-image"
+         alt="Cute Cat">
+
+    <div class="question-buttons">
+
+        <button id="yes-btn">
+            Yes 🌸
+        </button>
+
+        <button id="no-btn">
+            No 🌸
+        </button>
+
+    </div>
+
+</section>
+<!-- ================= HAPPY BIRTHDAY ================= -->
+
+<section id="birthday-page" class="hidden">
+
+    <div class="hearts"></div>
+
+    <h1 class="birthday-title">
+        Happy Birthday Babe 🎉
+    </h1>
+
+    <div class="teddy-container">
+
+        <img src="images/teddy-left.png"
+             class="teddy left"
+             alt="Left Teddy">
+
+        <div class="birthday-center">
+
+            <p class="birthday-text">
+                Today is all about you ❤️
+            </p>
+
+            <button id="continue-btn">
+                Continue 💖
+            </button>
+
+        </div>
+
+        <img src="images/teddy-right.png"
+             class="teddy right"
+             alt="Right Teddy">
+
+    </div>
+
+</section>
+
+<!-- ================= MENU ================= -->
+
+<section id="menu-page" class="hidden">
+
+    <h1>Choose One of These ✨</h1>
+
+    <div class="menu-cards">
+
+        <div class="gift-box" id="letter-card">
+            <div class="gift-lid"></div>
+            <div class="gift-body"></div>
+        </div>
+
+        <div class="gift-box" id="photos-card">
+            <div class="gift-lid"></div>
+            <div class="gift-body"></div>
+        </div>
+
+        <div class="gift-box" id="final-card">
+            <div class="gift-lid"></div>
+            <div class="gift-body"></div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= LETTER ================= -->
+
+<section id="letter-page" class="hidden">
+
+    <button class="back-btn" id="back-menu-1">
+        ⬅ Back
+    </button>
+
+    <div class="letter-wrapper">
+
+        <div class="envelope" id="open-envelope">
+
+            <div class="envelope-flap"></div>
+
+            <div class="envelope-body"></div>
+
+            <div class="seal">❤️</div>
+
+        </div>
+
+        <div class="letter-paper">
+
+            <h1>Happy Birthday, My Love! ❤️</h1>
+
+            <div id="letter-text"></div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= PIECES OF MY HEART ================= -->
+
+<section id="photos-page" class="hidden">
+
+    <button class="back-btn" id="back-menu-2">
+        ⬅ Back
+    </button>
+
+    <h1 class="photo-title">
+        Pieces of My Heart ❤️
+    </h1>
+
+    <div class="photo-gallery">
+
+        <div class="photo-card">
+
+            <img src="images/photo1.jpg" alt="Photo 1">
+
+            <p class="photo-note">
+                The moment I saw you, my world became a little more beautiful.💖
+            </p>
+
+        </div>
+
+        <div class="photo-card">
+
+            <img src="images/photo2.jpg" alt="Photo 2">
+
+            <p class="photo-note">
+                Every smile of yours is a memory I'll treasure forever. 🌸
+            </p>
+
+        </div>
+
+        <div class="photo-card">
+
+            <img src="images/photo3.jpg" alt="Photo 3">
+
+            <p class="photo-note">
+                No matter where life takes us, my heart will always choose you. 💖
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FINAL SURPRISE ================= -->
+
+<section id="final-page" class="hidden">
+
+    <div class="floating-hearts"></div>
+    <div class="falling-flowers"></div>
+
+    <button class="back-btn" id="back-menu-3">
+        ⬅ Back
+    </button>
+
+    <div class="final-content">
+
+    <h1 class="love-title reveal-1">
+        I LOVE YOU ❤️
+    </h1>
+
+    <p class="love-message reveal-2">
+        You are the best thing that ever happened to me. 💖
+    </p>
+
+    <button id="hug-btn" class="reveal-3">
+        💖 Hug Me
+    </button>
+
+    <p class="forever reveal-4">
+        Forever Yours ❤️
+    </p>
+
+</div>
+
+</section>
+
+<audio id="love-song" preload="auto">
+    <source src="music/until-i-found-you.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
