@@ -330,15 +330,6 @@ function stopParticles(){
 
 }
 /* ==========================================
-   LOVE SONG
-========================================== */
-
-const loveSong = new Audio("music/until-i-found-you.mp3");
-
-loveSong.loop = true;
-loveSong.volume = 0.8;
-
-/* ==========================================
    FINAL PAGE EVENTS (PART B)
 ========================================== */
 
